@@ -32,18 +32,7 @@ public class FileUtils {
 		
 		BufferedImage img = ImageIO.read(new File(basePath + inputFileName + fileExtension));
 
-		//column-major order should provide a performance improvement here
-		for (int y=0; y < img.getHeight(); y++) {
-			for (int x=0; x < img.getWidth(); x++) {
-				// you have access to the RGB values of the Pixel at (x,y) with:
-				int rgb = img.getRGB(x, y);
-				// do with this what you will.
-				
-				// eventually, invoke img.getRGB() with the desired RGB value.
-				// example is shown below.
-				img.setRGB(x, y, rgb);
-			}
-		}
+		// TODO: iterate over each pixel in the BufferedImage, and manipulate it according to the requirements.
 			
 		File outputFile = new File(basePath + outputFileName + fileExtension);
 			
